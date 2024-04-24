@@ -2,13 +2,13 @@
 CC=gcc
 CFLAGS=-Wall -g -Iinclude
 # Linker flags
-LDFLAGS=-lreadline
+LDFLAGS=-lreadline -lrt -pthread
 
 # The build target executable:
 TARGET=minios
 
 # Source, Object files
-SRCS=kernel/kernel.c kernel/system.c
+SRCS := $(wildcard kernel/*.c) $(wildcard kernel/20201590/*.c)
 OBJS=$(SRCS:.c=.o) 
 
 # Include directory

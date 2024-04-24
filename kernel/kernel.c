@@ -19,19 +19,44 @@ int main() {
         if (strcmp(input,"exit") == 0) {
             break;
         }
-
-        if (strcmp(input,"minisystem") == 0){
+	
+        else if (strcmp(input, "minisystem") == 0){
             minisystem();
-        }
-        else system(input);
-    }
+        }	
 
-    // 메모리 해제
-    free(input);
-    print_minios("[MiniOS SSU] MiniOS Shutdown........");
+		else if (strcmp(input, "smile") == 0){
+			smile();
+		}
 
-    return(1);
-}
+		else if (strcmp(input, "ssu_id") == 0){
+			ssu_id();
+		}
+
+		else if (strcmp(input, "fork_test") == 0){
+			fork_test();
+		}
+		
+		else if (strcmp(input, "pipe_test") == 0){
+			pipe_test();
+		}
+
+		else if (strcmp(input, "shared_memory_test") == 0){
+			shared_memory_test();
+		}
+		
+		else if (strcmp(input, "pi") == 0){
+			pi();
+		}
+		
+		else system(input);
+	}
+
+		// 메모리 해제
+		free(input);
+		print_minios("[MiniOS SSU] MiniOS Shutdown........");
+
+		return(1);
+	}
 
 void print_minios(char* str) {
         printf("%s\n",str);

@@ -5,3 +5,9 @@ void minisystem()
 {
     printf("minisystem\n");
 }
+
+void smile()
+{
+    printf(":)\n");
+}
+
