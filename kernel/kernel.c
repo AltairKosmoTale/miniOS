@@ -48,6 +48,10 @@ int main() {
 			pi();
 		}
 		
+		else if (strcmp(input, "round_robin") == 0){
+			round_robin();
+		}
+
 		else system(input);
 	}
 
