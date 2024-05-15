@@ -25,6 +25,9 @@ void *monte_carlo_pi(void *arg) {
 }
 
 int pi() {
+	number_of_points_in_circle = 0;
+	number_of_threads = 0;
+	total_number_of_points = 0;
 	struct timeval  tv;
 	double begin, end;
 	printf("Number_of_Threads: ");
@@ -49,9 +52,6 @@ int pi() {
     double pi_estimate = 4.0 * number_of_points_in_circle / total_number_of_points;
     printf("Estimated value of Pi: %.6f\n", pi_estimate);
     printf("Time taken: %.3f seconds\n", (end-begin)/1000);
-	number_of_points_in_circle = 0;
-	number_of_threads = 0;
-	total_number_of_points = 0;
     return 0;
 }
 
